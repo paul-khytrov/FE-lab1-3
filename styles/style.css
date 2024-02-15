@@ -1,0 +1,165 @@
+:root {
+    /*color*/
+    --color-background: rgb(230 230 230);
+    --color-text: rgb(0 0 0);
+    --color-header: rgb(80 80 80);
+    --color-menu: rgb(180 180 180);
+    --color-link: rgb(0 0 255);
+    --color-link-hover: rgb(255 0 0);
+    /*font size*/
+    --fontSize-h1: 2rem;
+    --fontSize-h2: 1.5rem;
+    --fontSize-h3: 1.3rem;
+    --fontSize-h4: 1.1rem;
+    --fontSize-paragraph: 1rem;
+    --base-line-height: 1.3;
+    /*dimension*/
+    --max-width: 80%;
+    --max-height: 100vh;
+    --mobile-nav-height: 60px;
+    --top-nav-height: 65px;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: var(--color-background);
+    font-size: var(--fontSize-paragraph);
+    line-height: var(--base-line-height);
+    font-family: "Noto Sans Display", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-header);
+}
+
+p {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    text-align: justify;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-link);
+}
+
+a:hover {
+    color: var(--color-link-hover);
+    cursor: pointer;
+}
+
+footer {
+    border-top: solid 1px;
+}
+
+.pageWrapper,
+header {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.mainWrapper {
+    max-width: var(--max-width);
+}
+
+li {
+    margin-left: 2rem;
+}
+
+table,
+tr,
+td,
+th {
+    border: solid 1px;
+    text-align: center;
+
+}
+
+.tableWrapper {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+strong {
+    color: red;
+}
+
+.imgWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+img {
+    width: 300px;
+}
+
+.formWrapper {
+    margin: 1rem;
+}
+
+form {
+    /* Center the form on the page */
+    margin: 0 auto;
+    width: 400px;
+    /* Form outline */
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+form li+li {
+    margin-top: 1em;
+}
+
+label {
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+}
+
+input,
+textarea {
+    width: 300px;
+    box-sizing: border-box;
+    border: 1px solid #999;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #000;
+}
+
+textarea {
+    vertical-align: top;
+    height: 5em;
+}
+
+.button {
+    padding-left: 90px;
+}
+
+button {
+    margin-left: 0.5em;
+}
