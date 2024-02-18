@@ -129,13 +129,13 @@ header {
 }
 
 .butt1 {
-    width: 100px;
+    width: 120px;
     height: 40px;
     border-radius: 5px;
     margin: 1rem;
     background-color: var(--color-menuButton);
     color: var(--color-text);
-    font-size: medium;
+    font-size: 1rem;
     cursor: pointer;
 }
 
@@ -206,8 +206,8 @@ header {
 }
 
 .threeImg article {
-    height: 200px;
-    width: 80%;
+    margin-bottom: 2rem;
+    width: 75%;
     text-align: center;
     color: var(--color-link);
     cursor: pointer;
@@ -219,7 +219,7 @@ header {
 
 .badge {
     width: 100px;
-    color: var(--color-text);
+
 }
 
 .linkHeader {
@@ -227,7 +227,7 @@ header {
 }
 
 .fourImg img {
-    height: 300px;
+    height: 350px;
     width: 70%;
     object-fit: cover;
 
