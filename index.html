@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
-    <title>FE-lab1-3</title>
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <title>Adventures</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -16,7 +16,7 @@
 </head>
 <header>
     <div class="menuWrapper">
-        <a id="logo">
+        <a id="logo" href="https://google.com">
             <h2 class="wow animate__flip">
                 Adventures
             </h2>
@@ -34,7 +34,7 @@
     <div class="pageWrapper">
         <div class="mainWrapper">
             <section class="bigImg wow animate__fadeIn">
-                <div class="imgHeaderBig wow animate__fadeInUp">Unforgettable travel experieces await</div>
+                <div class="imgHeaderBig wow animate__fadeInUp">Unforgettable travel experiences await</div>
                 <img src="images/123123.jpg" />
             </section>
             <section id="starterBox" class="wow animate__fadeIn">
@@ -72,7 +72,32 @@
                     <span>Starting from $200</span>
                 </a>
             </section>
+            <section class="fourImg wow animate__fadeIn">
+                <img src="images/image_2024-02-17_21-29-02.png" />
+                <img src="images/kyoto-japan-7-667x1000.jpg" />
+                <img src="images/555.jpg" />
+                <img src="images/s1.jpg" />
+                <a class="price" href="https://google.com">
+                    <div class="priceHeader">Santorini</div>
+                    <span>Starting from $50</span>
+                </a>
+                <a class="price" href="https://google.com">
+                    <div class="priceHeader">Kyoto</div>
+                    <span>Starting from $90</span>
+                </a>
+                <a class="price" href="https://google.com">
+                    <div class="priceHeader">Machu Picchu</div>
+                    <span>Starting from $400</span>
+                </a>
+                <a class="price" href="https://google.com">
+                    <div class="priceHeader">Serengeti</div>
+                    <span>Starting from $200</span>
+                </a>
+            </section>
             <section class="threeImg wow animate__fadeIn">
+                <div><img class="badge" src="images/ecommerce-guarantee-safe-svgrepo-com.svg" /></div>
+                <div><img class="badge" src="images/credit-card-svgrepo-com.svg" /></div>
+                <div><img class="badge" src="images/covid-19-svgrepo-com.svg" /></div>
                 <article href="">
                     <div class="linkHeader">Price Match Guarantee</div>
                     <div>We promise the best rates, contact us if you find a lower price elsewhere</div>
@@ -86,32 +111,6 @@
                     <div>Stay informed about covid-19 travel advisories affecting your trip</div>
                 </article>
             </section>
-
-            <div class="formWrapper">
-                <form action="/my-handling-form-page" method="post">
-                    <ul>
-                        <li>
-                            <label for="name">Name:</label>
-                            <input type="text" id="name" name="user_name"
-                                value="by default this element is filled with this text" />
-                        </li>
-                        <li>
-                            <label for="mail">Email:</label>
-                            <input type="email" id="mail" name="user_email" />
-                        </li>
-                        <li>
-                            <label for="msg">Message:</label>
-                            <textarea id="msg" name="user_message"></textarea>
-                        </li>
-                        <li class="button">
-                            <button type="submit">Send your message</button>
-                        </li>
-
-                    </ul>
-
-                </form>
-
-            </div>
         </div>
     </div>
     <script src="scripts/wow.js"></script>
@@ -120,7 +119,26 @@
     </script>
 </body>
 <footer>
-    <p>This is a footer</p>
+    <div class="footerWrapper wow animate__fadeIn">
+        <section class="contacts">
+            <h3>Explore Destination</h3>
+            <div><a href="">Legal</a></div>
+            <div><a href="">Career</a></div>
+            <div><a href="">Contact Us</a></div>
+            <div><a href="">Terms of Service</a></div>
+        </section>
+        <section class="formArea">
+            <div class="formWrapper">
+                <div class="formHeader">Sibscribe for travel inspiration</div>
+                <form action="/my-handling-form-page" method="post">
+                    <div class="formInput">
+                        <input type="email" id="mail" name="user_email" value="Your e-mail address" />
+                        <button class="butt1" type="submit">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
 </footer>
 
 </html>
