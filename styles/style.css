@@ -6,7 +6,7 @@
     --color-header: #ffffff;
     --color-menu: #2D2D2C;
     --color-menuButton: #000;
-    --color-link: rgb(0 0 255);
+    --color-link: rgb(255 255 255);
     --color-link-hover: rgb(255 0 0);
     /*font size*/
     --fontSize-paragraph: 1rem;
@@ -17,7 +17,6 @@
     --mobile-nav-height: 60px;
     --top-nav-height: 150px;
 }
-
 
 * {
     margin: 0;
@@ -67,11 +66,11 @@ p {
 a {
     text-decoration: none;
     color: var(--color-link);
+    cursor: pointer;
 }
 
 a:hover {
     color: var(--color-link-hover);
-    cursor: pointer;
 }
 
 footer {
@@ -86,6 +85,12 @@ header {
 
 #logo {
     margin-left: 3rem;
+    text-shadow: 2px 2px 5px rgb(255, 255, 255, 0.7);
+}
+
+#logo h2:hover {
+    color: var(--color-link-hover);
+    text-shadow: 2px 2px 7px var(--color-link-hover);
 }
 
 #navWrapper {
@@ -105,12 +110,12 @@ header {
 .butt1 {
     width: 100px;
     height: 40px;
-
     border-radius: 5px;
     margin: 1rem;
     background-color: var(--color-menuButton);
     color: var(--color-text);
     font-size: medium;
+    cursor: pointer;
 }
 
 .pageWrapper {
@@ -135,7 +140,6 @@ header {
     padding: 2rem;
 }
 
-
 .bigImg img {
     max-width: 90%;
     /*padding: 1rem;*/
@@ -151,6 +155,7 @@ header {
     font-weight: bold;
     letter-spacing: 0.2rem;
     text-align: justify;
+    text-shadow: 5px 5px 5px rgba(10, 10, 10, 0.5);
 }
 
 #starterBox {
@@ -171,9 +176,33 @@ header {
     padding-top: 1rem;
 }
 
+.threeImg {
+    display: grid;
+    width: 100%;
+    justify-items: center;
+    grid-template-columns: 5fr 5fr 5fr;
+    padding-top: 1rem;
+}
+
+.threeImg article {
+    height: 200px;
+    width: 80%;
+    text-align: center;
+    color: var(--color-link);
+    cursor: pointer;
+}
+
+.threeImg article:hover {
+    color: var(--color-link-hover);
+}
+
+.linkHeader {
+    font-size: 1.8rem;
+}
+
 .fourImg img {
     height: 300px;
-    width: 200px;
+    width: 70%;
     object-fit: cover;
 
 }
@@ -182,6 +211,18 @@ header {
     width: 50%;
     position: relative;
     bottom: 110%;
+    text-shadow: 2px 2px 2px rgba(10, 10, 10, 0.8);
+    cursor: pointer;
+    color: var(--color-link);
+}
+
+.price:hover {
+    color: var(--color-link-hover);
+}
+
+.priceHeader {
+    font-size: 1.6rem;
+    font-weight: bold;
 }
 
 li {
