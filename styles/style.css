@@ -14,7 +14,6 @@
     /*dimension*/
     --max-width: 80vw;
     --max-height: 100vh;
-    --mobile-nav-height: 60px;
     --top-nav-height: 150px;
 }
 
@@ -37,24 +36,25 @@ h1,
 h2,
 h3,
 h4 {
-
     color: var(--color-header);
 }
 
-h1 {
-    font-size: 3rem;
-}
+@media all and (min-width: 1000px) {
+    h1 {
+        font-size: 3rem;
+    }
 
-h2 {
-    font-size: 2rem;
-}
+    h2 {
+        font-size: 2rem;
+    }
 
-h3 {
-    font-size: 1.6rem;
-}
+    h3 {
+        font-size: 1.6rem;
+    }
 
-h4 {
-    font-size: 1.4rem;
+    h4 {
+        font-size: 1.4rem;
+    }
 }
 
 p {
@@ -73,35 +73,16 @@ a:hover {
     color: var(--color-link-hover);
 }
 
-footer {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-.footerWrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    background-color: var(--color-menu);
-    width: var(--max-width);
-}
-
-.contacts {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 2rem;
-    align-items: left;
-    justify-content: center;
-    gap: 20px;
-    font-size: 1.2rem;
-}
-
-
 header {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    display: none;
+}
+
+@media all and (min-width: 1000px) {
+    header {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
 }
 
 #logo {
@@ -114,42 +95,53 @@ header {
     text-shadow: 2px 2px 7px var(--color-link-hover);
 }
 
+.menuWrapper {
+    display: none;
+}
+
+@media all and (min-width: 1000px) {
+    .menuWrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: var(--max-width);
+        height: var(--top-nav-height);
+        background-color: var(--color-menu);
+    }
+}
+
 #navWrapper {
     margin: 1rem;
 }
 
-.menuWrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: var(--max-width);
-    height: var(--top-nav-height);
-    background-color: var(--color-menu);
-}
-
 .butt1 {
-    width: 120px;
+    width: 110px;
     height: 40px;
     border-radius: 5px;
-    margin: 1rem;
+    margin: 0.5rem;
     background-color: var(--color-menuButton);
     color: var(--color-text);
     font-size: 1rem;
     cursor: pointer;
 }
 
-.pageWrapper {
-    display: flex;
-    justify-content: center;
-}
 
-.mainWrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: var(--max-width);
-    background-color: var(--color-main-content);
+
+@media all and (min-width: 1000px) {
+    .mainWrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: var(--max-width);
+        background-color: var(--color-main-content);
+    }
+
+    .pageWrapper {
+        display: flex;
+        justify-content: center;
+    }
+
 }
 
 .bigImg {
@@ -163,30 +155,39 @@ header {
 
 .bigImg img {
     max-width: 90%;
-    /*padding: 1rem;*/
 }
 
 .imgHeaderBig {
     display: flex;
+    position: absolute;
     justify-content: center;
-    position: relative;
-    top: 40%;
-    width: 80%;
-    font-size: 3rem;
     font-weight: bold;
     letter-spacing: 0.2rem;
     text-align: center;
     text-shadow: 5px 5px 5px rgba(10, 10, 10, 0.5);
 }
 
-#starterBox {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 70%;
-    background-color: var(--color-menu);
-    padding-bottom: 1rem;
-    padding-top: 1rem;
+@media all and (min-width: 1000px) {
+    .imgHeaderBig {
+        top: 40%;
+        width: 70%;
+        font-size: 3rem;
+    }
+}
+
+@media all and (min-width: 1000px) {
+    #starterBox {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 10%;
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+        width: 70%;
+        background-color: var(--color-menu);
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+    }
 }
 
 .fourImg {
@@ -217,9 +218,20 @@ header {
     color: var(--color-link-hover);
 }
 
-.badge {
+.badge1,
+.badge2 {
     width: 100px;
+    height: 100px;
+}
 
+.badge1 {
+    fill: var(--color-text);
+}
+
+.badge2 {
+    fill: none;
+    stroke-width: 50;
+    stroke: var(--color-text);
 }
 
 .linkHeader {
@@ -249,6 +261,30 @@ header {
 .priceHeader {
     font-size: 1.6rem;
     font-weight: bold;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.footerWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--color-menu);
+    width: var(--max-width);
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem;
+    align-items: left;
+    justify-content: center;
+    gap: 20px;
+    font-size: 1.2rem;
 }
 
 .formArea {

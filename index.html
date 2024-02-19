@@ -1,144 +1,216 @@
 <!DOCTYPE html>
 <html lang="EN">
-
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
-    <title>Adventures</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=Wix+Madefor+Display:wght@400..800&display=swap"
-        rel="stylesheet">
-    <link href="styles/style.css" rel="stylesheet">
-    <link href="styles/animate.css" rel="stylesheet">
-</head>
-<header>
-    <div class="menuWrapper">
-        <a id="logo" href="https://google.com">
-            <h2 class="wow animate__flip">
-                Adventures
-            </h2>
-        </a>
-        <nav id="navWrapper">
-            <button class="butt1">Explore</button>
-            <button class="butt1">Discower</button>
-            <button class="butt1">Join Now</button>
-            <button class="butt1">Login</button>
-        </nav>
-    </div>
-</header>
-
-<body>
-    <div class="pageWrapper">
-        <div class="mainWrapper">
-            <section class="bigImg wow animate__fadeIn">
-                <div class="imgHeaderBig wow animate__fadeInUp">Unforgettable travel experiences await</div>
-                <img src="images/123123.jpg" />
-            </section>
-            <section id="starterBox" class="wow animate__fadeIn">
-                <a href="">
-                    Discover <br> memories
-                </a>
-                <a href="">
-                    Explore <br>Hidden Gems
-                </a>
-                <a href="">
-                    Embark on<br>unforgettable journey
-                </a>
-                <button class="butt1">Get started</button>
-            </section>
-            <h1 class="wow animate__fadeIn">Top Travel Destination</h1>
-            <section class="fourImg wow animate__fadeIn">
-                <img src="images/image_2024-02-17_21-29-02.png" />
-                <img src="images/kyoto-japan-7-667x1000.jpg" />
-                <img src="images/555.jpg" />
-                <img src="images/s1.jpg" />
-                <a class="price" href="">
-                    <div class="priceHeader">Santorini</div>
-                    <span>Starting from $50</span>
-                </a>
-                <a class="price" href="">
-                    <div class="priceHeader">Kyoto</div>
-                    <span>Starting from $90</span>
-                </a>
-                <a class="price" href="">
-                    <div class="priceHeader">Machu Picchu</div>
-                    <span>Starting from $400</span>
-                </a>
-                <a class="price" href="">
-                    <div class="priceHeader">Serengeti</div>
-                    <span>Starting from $200</span>
-                </a>
-            </section>
-            <section class="fourImg wow animate__fadeIn">
-                <img src="images/image_2024-02-17_21-29-02.png" />
-                <img src="images/kyoto-japan-7-667x1000.jpg" />
-                <img src="images/555.jpg" />
-                <img src="images/s1.jpg" />
-                <a class="price" href="">
-                    <div class="priceHeader">Santorini</div>
-                    <span>Starting from $50</span>
-                </a>
-                <a class="price" href="">
-                    <div class="priceHeader">Kyoto</div>
-                    <span>Starting from $90</span>
-                </a>
-                <a class="price" href="">
-                    <div class="priceHeader">Machu Picchu</div>
-                    <span>Starting from $400</span>
-                </a>
-                <a class="price" href="">
-                    <div class="priceHeader">Serengeti</div>
-                    <span>Starting from $200</span>
-                </a>
-            </section>
-            <section class="threeImg wow animate__fadeIn">
-                <div><img class="badge" src="images/ecommerce-guarantee-safe-svgrepo-com.svg" /></div>
-                <div><img class="badge" src="images/credit-card-svgrepo-com.svg" /></div>
-                <div><img class="badge" src="images/covid-19-svgrepo-com.svg" /></div>
-                <article>
-                    <div class="linkHeader">Price Match Guarantee</div>
-                    <div>We promise the best rates, contact us if you find a lower price elsewhere</div>
-                </article>
-                <article>
-                    <div class="linkHeader">Easy Refunds & Cancellations</div>
-                    <div>Flight cancellations? Get instant refunds whis us.</div>
-                </article>
-                <article>
-                    <div class="linkHeader">Covid-19 Travel Updates</div>
-                    <div>Stay informed about covid-19 travel advisories affecting your trip</div>
-                </article>
-            </section>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+        <title>Adventures</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=Wix+Madefor+Display:wght@400..800&display=swap"
+            rel="stylesheet">
+        <link href="styles/style.css" rel="stylesheet">
+        <link href="styles/style-mobile.css" rel="stylesheet">
+        <link href="styles/animate.css" rel="stylesheet">
+    </head>
+    <header>
+        <!-- desktop menu -->
+        <div class="menuWrapper">
+            <a id="logo" href="https://google.com">
+                <h2 class="wow animate__flip">
+                    Adventures
+                </h2>
+            </a>
+            <div id="navWrapper">
+                <button class="butt1">Explore</button>
+                <button class="butt1">Discower</button>
+                <button class="butt1">Join Now</button>
+                <button class="butt1">Login</button>
+            </div>
         </div>
-    </div>
-    <script src="scripts/wow.js"></script>
-    <script>
+    </header>
+    <body>
+        <!-- mobile menu -->
+        <div class="mobileMenuWrapper">
+            <a id="logo" href="https://google.com">
+                <h2 class="wow animate__flip">
+                    Adventures
+                </h2>
+            </a>
+            <div id="hamburger" onclick="menuOpen()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="pageWrapper">
+            <div class="mainWrapper">
+                <section class="bigImg wow animate__fadeIn">
+                    <div
+                        class="imgHeaderBig wow animate__fadeInUp">Unforgettable
+                        travel experiences await</div>
+                    <img src="images/123123.jpg" />
+                </section>
+                <section id="starterBox" class="wow animate__fadeIn">
+                    <a href>
+                        Discover memories
+                    </a>
+                    <a href>
+                        Explore Hidden Gems
+                    </a>
+                    <a href>
+                        Embark on unforgettable journey
+                    </a>
+                    <button class="butt1">Get started</button>
+                </section>
+                <h1 class="wow animate__fadeIn">Top Travel Destination</h1>
+                <section class="fourImg wow animate__fadeIn">
+                    <img src="images/image_2024-02-17_21-29-02.png" />
+                    <img src="images/kyoto-japan-7-667x1000.jpg" />
+                    <img src="images/555.jpg" />
+                    <img src="images/s1.jpg" />
+                    <a class="price" href>
+                        <div class="priceHeader">Santorini</div>
+                        <span>Starting from $50</span>
+                    </a>
+                    <a class="price" href>
+                        <div class="priceHeader">Kyoto</div>
+                        <span>Starting from $90</span>
+                    </a>
+                    <a class="price" href>
+                        <div class="priceHeader">Machu Picchu</div>
+                        <span>Starting from $400</span>
+                    </a>
+                    <a class="price" href>
+                        <div class="priceHeader">Serengeti</div>
+                        <span>Starting from $200</span>
+                    </a>
+                </section>
+                <section class="fourImg wow animate__fadeIn">
+                    <img src="images/image_2024-02-17_21-29-02.png" />
+                    <img src="images/kyoto-japan-7-667x1000.jpg" />
+                    <img src="images/555.jpg" />
+                    <img src="images/s1.jpg" />
+                    <a class="price" href>
+                        <div class="priceHeader">Santorini</div>
+                        <span>Starting from $50</span>
+                    </a>
+                    <a class="price" href>
+                        <div class="priceHeader">Kyoto</div>
+                        <span>Starting from $90</span>
+                    </a>
+                    <a class="price" href>
+                        <div class="priceHeader">Machu Picchu</div>
+                        <span>Starting from $400</span>
+                    </a>
+                    <a class="price" href>
+                        <div class="priceHeader">Serengeti</div>
+                        <span>Starting from $200</span>
+                    </a>
+                </section>
+                <section class="threeImg wow animate__fadeIn">
+                    <!-- ecommerce -->
+                    <svg class="badge1" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 800 800">
+                        <g>
+                            <path
+                                d="M719.5,135.58L407,44.83c-4.649-1.382-9.601-1.382-14.25,0l0,0l-312.5,90.875
+                        		c-10.523,3.189-17.728,12.879-17.75,23.875v272.875c0,237.5,317.875,319.625,331.5,323c1.962,0.492,3.977,0.744,6,0.75
+                        		c2.198,0.033,4.389-0.262,6.5-0.875c19.5-4.875,331-87.625,331-322.875V159.58C737.5,148.468,730.167,138.691,719.5,135.58z
+                        		 M687.5,432.454c0,182.5-245.5,261.25-287.5,272.875c-42-11.625-287.5-90-287.5-272.875v-254L400,94.705l287.5,83.75V432.454z" />
+                            <path
+                                d="M375,243.705v26.125c-40.801,7.144-68.085,46.01-60.941,86.811
+                        		c6.254,35.725,37.176,61.854,73.441,62.064H425c13.807,0,25,11.193,25,25s-11.193,25-25,25h-75c-13.807,0-25,11.193-25,25
+                        		s11.193,25,25,25h25v25c0,13.807,11.193,25,25,25s25-11.193,25-25v-25c41.421,0,75-33.579,75-75c0-41.422-33.579-75-75-75h-37.5
+                        		c-13.807,0-25-11.193-25-25s11.193-25,25-25h75c13.807,0,25-11.193,25-25s-11.193-25-25-25H425v-25c0-13.807-11.193-25-25-25
+                        		S375,229.898,375,243.705z" />
+                        </g>
+                    </svg>
+                    <!-- credit-card -->
+                    <svg class="badge2" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 800 800">
+                        <g>
+                            <path
+                                style="stroke-linecap:round;stroke-linejoin:round;"
+                                d="M50,283.343h700
+                		 M205.552,516.687h77.791 M174.441,672.209h451.116c43.576,0,65.366,0,81.982-8.454c14.61-7.46,26.546-19.341,34.006-34.005
+                		C750,613.133,750,591.343,750,547.768V252.233c0-43.576,0-65.364-8.454-81.982c-7.46-14.641-19.396-26.544-34.006-34.006
+                		c-16.616-8.454-38.406-8.454-81.982-8.454H174.441c-43.546,0-65.334,0-81.981,8.454c-14.641,7.462-26.515,19.366-33.978,34.006
+                		C50,186.869,50,208.656,50,252.233v295.535c0,43.575,0,65.365,8.483,81.982c7.462,14.664,19.337,26.545,33.978,34.005
+                		C109.107,672.209,130.895,672.209,174.441,672.209z" />
+                        </g>
+                    </svg>
+                    <!-- Covid-19 -->
+                    <svg class="badge1" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 800 800">
+                        <path
+                            d="M431.818,50v97.424c45.122,5.626,86.579,23.064,121.176,49.123l73.59-73.591l44.999,44.998l-72.906,72.906
+                	c28.7,35.787,47.936,79.493,53.9,127.322H750v63.637h-97.423c-5.795,46.476-24.123,89.061-51.49,124.269l70.5,70.501l-44.994,44.999
+                	l-70.501-70.5c-35.208,27.367-77.794,45.695-124.273,51.49V750h-63.637v-97.423c-47.829-5.965-91.536-25.2-127.322-53.9
+                	l-72.908,72.91l-44.998-44.999l73.593-73.594c-26.058-34.597-43.496-76.054-49.123-121.176H50v-63.637h97.424
+                	c5.796-46.48,24.122-89.064,51.492-124.272l-75.956-75.956l44.997-44.998l75.957,75.957c35.208-27.367,77.793-45.692,124.269-51.488
+                	V50H431.818z M400,590.909c105.438,0,190.909-85.472,190.909-190.909c0-105.436-85.472-190.909-190.909-190.909
+                	c-105.436,0-190.909,85.473-190.909,190.909C209.091,505.438,294.564,590.909,400,590.909z M400,479.546
+                	c0,26.357-21.369,47.727-47.727,47.727c-26.358,0-47.728-21.369-47.728-47.727c0-26.358,21.369-47.728,47.728-47.728
+                	C378.631,431.818,400,453.188,400,479.546z M431.818,400c35.144,0,63.636-28.492,63.636-63.636
+                	c0-35.146-28.492-63.637-63.636-63.637c-35.145,0-63.637,28.491-63.637,63.637C368.182,371.508,396.674,400,431.818,400z" />
+                    </svg>
+                    <article>
+                        <div class="linkHeader">Price Match Guarantee</div>
+                        <div>We promise the best rates, contact us if you find a
+                            lower price elsewhere</div>
+                    </article>
+                    <article>
+                        <div class="linkHeader">Easy Refunds &
+                            Cancellations</div>
+                        <div>Flight cancellations? Get instant refunds whis
+                            us.</div>
+                    </article>
+                    <article>
+                        <div class="linkHeader">Covid-19 Travel Updates</div>
+                        <div>Stay informed about covid-19 travel advisories
+                            affecting your trip</div>
+                    </article>
+                </section>
+            </div>
+        </div>
+        <footer>
+            <div class="footerWrapper wow animate__fadeIn">
+                <section class="contacts">
+                    <h3>Explore Destination</h3>
+                    <div><a href>Legal</a></div>
+                    <div><a href>Career</a></div>
+                    <div><a href>Contact Us</a></div>
+                    <div><a href>Terms of Service</a></div>
+                </section>
+                <section class="formArea">
+                    <div class="formWrapper">
+                        <div class="formHeader">Sibscribe for travel
+                            inspiration</div>
+                        <form action="/my-handling-form-page" method="post">
+                            <div class="formInput">
+                                <input type="email" id="mail" name="user_email"
+                                    value="Your e-mail address" />
+                                <button class="butt1"
+                                    type="submit">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </footer>
+        <script src="scripts/wow.js"></script>
+        <script src="scripts/script.js"></script>
+        <script>
         new WOW().init();
     </script>
-</body>
-<footer>
-    <div class="footerWrapper wow animate__fadeIn">
-        <section class="contacts">
-            <h3>Explore Destination</h3>
-            <div><a href="">Legal</a></div>
-            <div><a href="">Career</a></div>
-            <div><a href="">Contact Us</a></div>
-            <div><a href="">Terms of Service</a></div>
-        </section>
-        <section class="formArea">
-            <div class="formWrapper">
-                <div class="formHeader">Sibscribe for travel inspiration</div>
-                <form action="/my-handling-form-page" method="post">
-                    <div class="formInput">
-                        <input type="email" id="mail" name="user_email" value="Your e-mail address" />
-                        <button class="butt1" type="submit">Subscribe</button>
-                    </div>
-                </form>
-            </div>
-        </section>
-    </div>
-</footer>
-
+    </body>
 </html>
