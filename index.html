@@ -11,6 +11,7 @@
             href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=Wix+Madefor+Display:wght@400..800&display=swap"
             rel="stylesheet">
         <link href="styles/style.css" rel="stylesheet">
+        <link href="styles/style-desktop.css" rel="stylesheet">
         <link href="styles/style-mobile.css" rel="stylesheet">
         <link href="styles/animate.css" rel="stylesheet">
     </head>
@@ -44,7 +45,6 @@
                 <span></span>
             </div>
         </div>
-
         <div class="pageWrapper">
             <div class="mainWrapper">
                 <section class="bigImg wow animate__fadeIn">
@@ -66,53 +66,35 @@
                     <button class="butt1">Get started</button>
                 </section>
                 <h1 class="wow animate__fadeIn">Top Travel Destination</h1>
-                <section class="fourImg wow animate__fadeIn">
-                    <img src="images/image_2024-02-17_21-29-02.png" />
-                    <img src="images/kyoto-japan-7-667x1000.jpg" />
-                    <img src="images/555.jpg" />
-                    <img src="images/s1.jpg" />
-                    <a class="price" href>
+                <section class="fourImg">
+                    <img style="grid-area: img1" class="wow animate__fadeIn"
+                        src="images/image_2024-02-17_21-29-02.png" />
+                    <img style="grid-area: img2" class="wow animate__fadeIn"
+                        src="images/kyoto-japan-7-667x1000.jpg" />
+                    <img style="grid-area: img3" class="wow animate__fadeIn"
+                        src="images/555.jpg" />
+                    <img style="grid-area: img4" class="wow animate__fadeIn"
+                        src="images/s1.jpg" />
+                    <a style="grid-area: pr1" class="price" href>
                         <div class="priceHeader">Santorini</div>
                         <span>Starting from $50</span>
                     </a>
-                    <a class="price" href>
+                    <a style="grid-area: pr2" class="price" href>
                         <div class="priceHeader">Kyoto</div>
                         <span>Starting from $90</span>
                     </a>
-                    <a class="price" href>
+                    <a style="grid-area: pr3" class="price" href>
                         <div class="priceHeader">Machu Picchu</div>
                         <span>Starting from $400</span>
                     </a>
-                    <a class="price" href>
-                        <div class="priceHeader">Serengeti</div>
-                        <span>Starting from $200</span>
-                    </a>
-                </section>
-                <section class="fourImg wow animate__fadeIn">
-                    <img src="images/image_2024-02-17_21-29-02.png" />
-                    <img src="images/kyoto-japan-7-667x1000.jpg" />
-                    <img src="images/555.jpg" />
-                    <img src="images/s1.jpg" />
-                    <a class="price" href>
-                        <div class="priceHeader">Santorini</div>
-                        <span>Starting from $50</span>
-                    </a>
-                    <a class="price" href>
-                        <div class="priceHeader">Kyoto</div>
-                        <span>Starting from $90</span>
-                    </a>
-                    <a class="price" href>
-                        <div class="priceHeader">Machu Picchu</div>
-                        <span>Starting from $400</span>
-                    </a>
-                    <a class="price" href>
+                    <a style="grid-area: pr4" class="price" href>
                         <div class="priceHeader">Serengeti</div>
                         <span>Starting from $200</span>
                     </a>
                 </section>
                 <section class="threeImg wow animate__fadeIn">
                     <!-- ecommerce -->
-                    <svg class="badge1" version="1.1"
+                    <svg style="grid-area: badge1" class="badge1" version="1.1"
                         xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
                         viewBox="0 0 800 800">
@@ -131,7 +113,7 @@
                         </g>
                     </svg>
                     <!-- credit-card -->
-                    <svg class="badge2" version="1.1"
+                    <svg style="grid-area: badge2" class="badge2" version="1.1"
                         xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
                         viewBox="0 0 800 800">
@@ -147,7 +129,7 @@
                         </g>
                     </svg>
                     <!-- Covid-19 -->
-                    <svg class="badge1" version="1.1"
+                    <svg style="grid-area: badge3" class="badge1" version="1.1"
                         xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
                         viewBox="0 0 800 800">
@@ -163,18 +145,18 @@
                 	C378.631,431.818,400,453.188,400,479.546z M431.818,400c35.144,0,63.636-28.492,63.636-63.636
                 	c0-35.146-28.492-63.637-63.636-63.637c-35.145,0-63.637,28.491-63.637,63.637C368.182,371.508,396.674,400,431.818,400z" />
                     </svg>
-                    <article>
+                    <article style="grid-area: message1">
                         <div class="linkHeader">Price Match Guarantee</div>
                         <div>We promise the best rates, contact us if you find a
                             lower price elsewhere</div>
                     </article>
-                    <article>
+                    <article style="grid-area: message2">
                         <div class="linkHeader">Easy Refunds &
                             Cancellations</div>
                         <div>Flight cancellations? Get instant refunds whis
                             us.</div>
                     </article>
-                    <article>
+                    <article style="grid-area: message3">
                         <div class="linkHeader">Covid-19 Travel Updates</div>
                         <div>Stay informed about covid-19 travel advisories
                             affecting your trip</div>
