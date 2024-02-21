@@ -135,7 +135,7 @@ header,
     display: grid;
     width: 100%;
     justify-items: center;
-    grid-template-columns: 1fr 1fr 1fr 1fr 10px 10px 10px 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas: "img1 img2 img3 img4" "pr1 pr2 pr3 pr4";
     padding-top: 1rem;
   }
