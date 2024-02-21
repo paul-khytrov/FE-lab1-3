@@ -1,0 +1,317 @@
+//_style-desktop.scss
+$layout-breakpoint: 1000px;
+$color-background: #1e1e1e;
+$color-main-content: #161616;
+$color-text: #ffffff;
+$color-header: #ffffff;
+$color-menu: #2D2D2C;
+$color-menuButton: #000;
+$color-link: rgb(255 255 255);
+$color-link-hover: rgb(255 0 0);
+$fontSize-paragraph: 1rem;
+$base-line-height: 1.3;
+$max-width: 80vw;
+$top-nav-height: 150px;
+
+header,
+.menuWrapper {
+    display: none;
+}
+
+@media all and (min-width: $layout-breakpoint) {
+    html {
+        background-color: $color-background;
+        font-size: $fontSize-paragraph;
+        line-height: $base-line-height;
+        font-family: "Noto Sans Display", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        color: $color-text;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        color: $color-header;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.6rem;
+    }
+
+    h4 {
+        font-size: 1.4rem;
+    }
+
+    p {
+        margin: {
+            top: 0.5rem;
+            bottom: 0.5rem;
+        }
+
+        text-align: justify;
+    }
+
+    a {
+        text-decoration: none;
+        color: $color-link;
+        cursor: pointer;
+
+        &:hover {
+            color: $color-link-hover;
+        }
+    }
+
+    #logo {
+        margin-left: 3rem;
+        text-shadow: 2px 2px 5px rgb(255, 255, 255, 0.7);
+
+        h2:hover {
+            color: $color-link-hover;
+            text-shadow: 2px 2px 7px $color-link-hover;
+        }
+    }
+
+    #navWrapper {
+        margin: 1rem;
+    }
+
+    header {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .menuWrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: $max-width;
+        height: $top-nav-height;
+        background-color: $color-menu;
+    }
+
+    .mainWrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: $max-width;
+        background-color: $color-main-content;
+        width: $max-width;
+    }
+
+    .pageWrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .bigImg {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+
+        & img {
+            max-width: 90%;
+        }
+    }
+
+    .imgHeaderBig {
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        font-weight: bold;
+        letter-spacing: 0.2rem;
+        text-align: center;
+        text-shadow: 5px 5px 5px rgba(10, 10, 10, 0.5);
+        top: 40%;
+        width: 70%;
+        font-size: 3rem;
+    }
+
+    .butt1 {
+        width: 110px;
+        height: 40px;
+        border-radius: 5px;
+        margin: 0.5rem;
+        background-color: $color-menuButton;
+        color: $color-text;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+
+    #starterBox {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 10%;
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+        width: 70%;
+        background-color: $color-menu;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+    }
+
+    .priceHeader {
+        font-size: 1.6rem;
+        font-weight: bold;
+    }
+
+    .fourImg {
+        display: grid;
+        width: 100%;
+        justify-items: center;
+        grid-template-columns: 1fr 1fr 1fr 1fr 10px 10px 10px 10px;
+        grid-template-areas:
+            "img1 img2 img3 img4"
+            "pr1 pr2 pr3 pr4";
+        padding-top: 1rem;
+
+        & img {
+            height: 350px;
+            width: 70%;
+            object-fit: cover;
+        }
+    }
+
+    .price {
+        width: 50%;
+        position: relative;
+        top: -110%;
+        text-shadow: 2px 2px 2px rgba(10, 10, 10, 0.8);
+        cursor: pointer;
+        color: $color-link;
+
+        &:hover {
+            color: $color-link-hover;
+        }
+    }
+
+    .threeImg {
+        display: grid;
+        width: 100%;
+        justify-items: center;
+        grid-template-columns: 5fr 5fr 5fr;
+        grid-template-areas:
+            "badge1 badge2 badge3"
+            "message1 message2 message3";
+        padding-top: 1rem;
+
+        & article {
+            margin-bottom: 2rem;
+            width: 75%;
+            text-align: center;
+            color: $color-link;
+            cursor: pointer;
+
+            &:hover {
+                color: $color-link-hover;
+            }
+        }
+    }
+
+    .badge1,
+    .badge2 {
+        width: 100px;
+        height: 100px;
+    }
+
+    .badge1 {
+        fill: $color-text;
+    }
+
+    .badge2 {
+        fill: none;
+        stroke-width: 50;
+        stroke: $color-text;
+    }
+
+    .linkHeader {
+        font-size: 1.8rem;
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .footerWrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-color: $color-menu;
+        width: $max-width;
+    }
+
+    .contacts {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 2rem;
+        justify-content: center;
+        gap: 20px;
+        font-size: 1.2rem;
+    }
+
+    .formArea {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .formWrapper {
+        display: grid;
+        grid-template-rows: 1fr 2fr;
+        align-items: center;
+        width: 70%;
+        height: 100px;
+        padding: 1em;
+        border: 1px solid $color-text;
+        border-radius: 1em;
+        background-color: $color-main-content;
+    }
+
+    .formHeader {
+        margin: 0.5rem;
+    }
+
+    .formInput {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 0.5rem;
+        width: 100%;
+    }
+
+    input {
+        width: 100%;
+        height: 40px;
+        box-sizing: border-box;
+        border: solid 1px $color-text;
+        border-radius: 10px;
+        background-color: $color-menu;
+        color: $color-text;
+        padding: 0.5rem;
+        font-weight: bold;
+        font-size: 0.9rem;
+
+        &:focus {
+            border-color: #042de2;
+        }
+    }
+}
