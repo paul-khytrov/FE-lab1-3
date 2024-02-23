@@ -1,21 +1,12 @@
 //_style-mobile.scss
-$layout-breakpoint: 1000px;
-$color-background: #1e1e1e;
-$color-main-content: #161616;
-$color-text: #ffffff;
-$color-header: #ffffff;
-$color-menu: #2D2D2C;
-$color-menuButton: #000;
-$color-link: rgb(255 255 255);
-$color-link-hover: rgb(255 0 0);
-$fontSize-paragraph: 1rem;
-$base-line-height: 1.3;
+@use 'style-global';
+
 $mobile-nav-height: 70px;
 
 .mobileMenuWrapper {
     display: none;
 
-    @media all and (max-width: $layout-breakpoint) {
+    @media all and (max-width: style-global.$layout-breakpoint) {
         display: flex;
         position: sticky;
         top: 0;
@@ -24,33 +15,11 @@ $mobile-nav-height: 70px;
         justify-content: space-between;
         align-items: center;
         height: $mobile-nav-height;
-        background-color: $color-menu;
+        background-color: style-global.$color-menu;
     }
 }
 
-@media all and (max-width: $layout-breakpoint) {
-    * {
-        margin: 0;
-        padding: 0;
-    }
-
-    html {
-        background-color: $color-background;
-        font-size: $fontSize-paragraph;
-        line-height: $base-line-height;
-        font-family: "Noto Sans Display", sans-serif;
-        font-optical-sizing: auto;
-        font-style: normal;
-        color: $color-text;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4 {
-        color: $color-header;
-    }
-
+@media all and (max-width: style-global.$layout-breakpoint) {
     h1 {
         font-size: 2rem;
     }
@@ -67,22 +36,13 @@ $mobile-nav-height: 70px;
         font-size: 1.3rem;
     }
 
-    p {
-        margin: {
-            top: 0.5rem;
-            bottom: 0.5rem;
-        }
-
-        text-align: justify;
-    }
-
     a {
         text-decoration: none;
-        color: $color-link;
+        color: style-global.$color-link;
         cursor: pointer;
 
         &:hover {
-            color: $color-link-hover;
+            color: style-global.$color-link-hover;
         }
     }
 
@@ -91,8 +51,8 @@ $mobile-nav-height: 70px;
         text-shadow: 2px 2px 5px rgb(255, 255, 255, 0.7);
 
         h2:hover {
-            color: $color-link-hover;
-            text-shadow: 2px 2px 7px $color-link-hover;
+            color: style-global.$color-link-hover;
+            text-shadow: 2px 2px 7px style-global.$color-link-hover;
         }
     }
 
@@ -100,7 +60,7 @@ $mobile-nav-height: 70px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: $color-main-content;
+        background-color: style-global.$color-main-content;
         width: 100%;
     }
 
@@ -122,8 +82,8 @@ $mobile-nav-height: 70px;
         height: 40px;
         border-radius: 5px;
         margin: 0.5rem;
-        background-color: $color-menuButton;
-        color: $color-text;
+        background-color: style-global.$color-menuButton;
+        color: style-global.$color-text;
         font-size: 1rem;
         cursor: pointer;
     }
@@ -151,7 +111,7 @@ $mobile-nav-height: 70px;
         justify-items: center;
         align-items: center;
         width: 100%;
-        background-color: $color-menu;
+        background-color: style-global.$color-menu;
 
         padding {
             bottom: 1rem;
@@ -190,10 +150,10 @@ $mobile-nav-height: 70px;
         top: -100px;
         text-shadow: 2px 2px 2px rgba(10, 10, 10, 0.8);
         cursor: pointer;
-        color: $color-link;
+        color: style-global.$color-link;
 
         &:hover {
-            color: $color-link-hover;
+            color: style-global.$color-link-hover;
         }
     }
 
@@ -218,11 +178,11 @@ $mobile-nav-height: 70px;
         & article {
             width: 75%;
             text-align: left;
-            color: $color-link;
+            color: style-global.$color-link;
             cursor: pointer;
 
             &:hover {
-                color: $color-link-hover;
+                color: style-global.$color-link-hover;
             }
         }
     }
@@ -235,13 +195,13 @@ $mobile-nav-height: 70px;
     }
 
     .badge1 {
-        fill: $color-text;
+        fill: style-global.$color-text;
     }
 
     .badge2 {
         fill: none;
         stroke-width: 50;
-        stroke: $color-text;
+        stroke: style-global.$color-text;
     }
 
     .linkHeader {
@@ -251,7 +211,7 @@ $mobile-nav-height: 70px;
     .footerWrapper {
         display: grid;
         grid-template-rows: 2fr 1fr;
-        background-color: $color-menu;
+        background-color: style-global.$color-menu;
         width: 100%;
         padding-bottom: 1rem;
     }
@@ -280,9 +240,9 @@ $mobile-nav-height: 70px;
         width: 70%;
         height: 100px;
         padding: 1em;
-        border: 1px solid $color-text;
+        border: 1px solid style-global.$color-text;
         border-radius: 1em;
-        background-color: $color-main-content;
+        background-color: style-global.$color-main-content;
     }
 
     .formHeader {
@@ -301,10 +261,10 @@ $mobile-nav-height: 70px;
         width: 100%;
         height: 40px;
         box-sizing: border-box;
-        border: solid 1px $color-text;
+        border: solid 1px style-global.$color-text;
         border-radius: 10px;
-        background-color: $color-menu;
-        color: $color-text;
+        background-color: style-global.$color-menu;
+        color: style-global.$color-text;
         padding: 0.5rem;
         font-weight: bold;
         font-size: 0.9rem;
@@ -329,7 +289,7 @@ $mobile-nav-height: 70px;
         display: block;
         height: 3px;
         width: 100%;
-        background: $color-text;
+        background: style-global.$color-text;
         border-radius: 9px;
         opacity: 1;
         left: 0;

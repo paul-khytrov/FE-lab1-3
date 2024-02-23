@@ -1,0 +1,44 @@
+// _style-global.scss
+$layout-breakpoint: 1000px;
+$color-background: #1e1e1e !default;
+$color-main-content: #161616 !default;
+$color-text: #ffffff;
+$color-header: #ffffff;
+$color-menu: #2D2D2C;
+$color-menuButton: #000;
+$color-link: rgb(255 255 255);
+$color-link-hover: rgb(255 0 0);
+$fontSize-paragraph: 1rem;
+$base-line-height: 1.3;
+$max-width: 80vw;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: $color-background;
+    font-size: $fontSize-paragraph;
+    line-height: $base-line-height;
+    font-family: "Noto Sans Display", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: $color-text;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: $color-header;
+}
+
+p {
+    margin: {
+        top: 0.5rem;
+        bottom: 0.5rem;
+    }
+
+    text-align: justify;
+}
