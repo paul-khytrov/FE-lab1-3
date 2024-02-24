@@ -1,5 +1,5 @@
 //_style-mobile.scss
-@use 'style-global';
+@use "style-global";
 
 $mobile-nav-height: 70px;
 
@@ -18,20 +18,20 @@ $mobile-nav-height: 70px;
 }
 
 @media all and (max-width: style-global.$layout-breakpoint) {
-    h1 {
-        font-size: 2rem;
-    }
+    //headers font-sizes:
+    $h-sizes: (
+        h1: 2rem,
+        h2: 1.9rem,
+        h3: 1.5rem,
+        h4: 1.3rem
+    );
 
-    h2 {
-        font-size: 1.9rem;
-    }
+    @each $h, $h-size in $h-sizes {
+        //@debug $h, $h-size;
 
-    h3 {
-        font-size: 1.5rem;
-    }
-
-    h4 {
-        font-size: 1.3rem;
+        #{$h} {
+            font-size: $h-size;
+        }
     }
 
     a {
@@ -251,7 +251,7 @@ $mobile-nav-height: 70px;
     height: 15px;
     position: relative;
     transform: rotate(0deg);
-    transition: .6s ease-in-out;
+    transition: 0.6s ease-in-out;
     cursor: pointer;
     margin-right: 2rem;
 
@@ -264,7 +264,7 @@ $mobile-nav-height: 70px;
         opacity: 1;
         left: 0;
         transform: rotate(0deg);
-        transition: .25s ease-in-out;
+        transition: 0.25s ease-in-out;
         position: absolute;
 
         &:nth-child(1) {
@@ -283,17 +283,17 @@ $mobile-nav-height: 70px;
     &.open span {
         &:nth-child(1) {
             top: 7px;
-            transform: rotate(135deg)
+            transform: rotate(135deg);
         }
 
         &:nth-child(2) {
             opacity: 0;
-            left: -60px
+            left: -60px;
         }
 
         &:nth-child(3) {
             top: 7px;
-            transform: rotate(-135deg)
+            transform: rotate(-135deg);
         }
     }
 }

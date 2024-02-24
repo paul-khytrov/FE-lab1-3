@@ -1,5 +1,5 @@
 //_style-desktop.scss
-@use 'style-global';
+@use "style-global";
 
 $top-nav-height: 150px;
 
@@ -9,20 +9,16 @@ header,
 }
 
 @media all and (min-width: style-global.$layout-breakpoint) {
-    h1 {
-        font-size: 3rem;
-    }
+    //headers font-sizes:
+    $h-sizes: 3rem, 2rem, 1.6rem, 1.4rem;
 
-    h2 {
-        font-size: 2rem;
-    }
+    @each $h-size in $h-sizes {
+        $i: index($h-sizes, $h-size);
+        //@debug $i, $h-size;
 
-    h3 {
-        font-size: 1.6rem;
-    }
-
-    h4 {
-        font-size: 1.4rem;
+        h#{$i} {
+            font-size: $h-size;
+        }
     }
 
     a {
