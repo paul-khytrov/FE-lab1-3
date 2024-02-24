@@ -26,13 +26,7 @@ header,
     }
 
     a {
-        text-decoration: none;
-        color: style-global.$color-link;
-        cursor: pointer;
-
-        &:hover {
-            color: style-global.$color-link-hover;
-        }
+        @include style-global.link;
     }
 
     #logo {
@@ -50,41 +44,31 @@ header,
     }
 
     header {
+        @include style-global.flexBox;
         width: 100%;
-        display: flex;
-        justify-content: center;
     }
 
     .menuWrapper {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        @include style-global.flexBox($fd: row, $jc: space-between);
         width: style-global.$max-width;
         height: $top-nav-height;
         background-color: style-global.$color-menu;
     }
 
     .mainWrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include style-global.flexBox;
         width: style-global.$max-width;
         background-color: style-global.$color-main-content;
         width: style-global.$max-width;
     }
 
     .pageWrapper {
-        display: flex;
-        justify-content: center;
+        @include style-global.flexBox;
     }
 
     .bigImg {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        @include style-global.flexBox;
         width: 100%;
-        align-items: center;
         padding-top: 2rem;
         padding-bottom: 2rem;
 
@@ -94,9 +78,8 @@ header,
     }
 
     .imgHeaderBig {
-        display: flex;
+        @include style-global.flexBox;
         position: absolute;
-        justify-content: center;
         font-weight: bold;
         letter-spacing: 0.2rem;
         text-align: center;
@@ -153,16 +136,11 @@ header,
     }
 
     .price {
+        @include style-global.link;
         width: 50%;
         position: relative;
         top: -110%;
         text-shadow: 2px 2px 2px rgba(10, 10, 10, 0.8);
-        cursor: pointer;
-        color: style-global.$color-link;
-
-        &:hover {
-            color: style-global.$color-link-hover;
-        }
     }
 
     .threeImg {
@@ -176,15 +154,10 @@ header,
         padding-top: 1rem;
 
         & article {
+            @include style-global.link;
             margin-bottom: 2rem;
             width: 75%;
             text-align: center;
-            color: style-global.$color-link;
-            cursor: pointer;
-
-            &:hover {
-                color: style-global.$color-link-hover;
-            }
         }
     }
 
@@ -209,8 +182,7 @@ header,
     }
 
     footer {
-        display: flex;
-        justify-content: center;
+        @include style-global.flexBox;
         width: 100%;
     }
 
@@ -222,20 +194,15 @@ header,
     }
 
     .contacts {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
+        @include style-global.flexBox($ai: start);
         padding: 2rem;
-        justify-content: center;
         gap: 20px;
         font-size: 1.2rem;
     }
 
     .formArea {
+        @include style-global.flexBox;
         width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
     .formWrapper {
@@ -255,9 +222,7 @@ header,
     }
 
     .formInput {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+        @include style-global.flexBox($fd: row);
         margin: 0.5rem;
         width: 100%;
     }

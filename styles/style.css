@@ -64,9 +64,11 @@ header,
     margin: 1rem;
   }
   header {
-    width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    width: 100%;
   }
   .menuWrapper {
     display: flex;
@@ -80,6 +82,7 @@ header,
   .mainWrapper {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     width: 80vw;
     background-color: #161616;
@@ -87,14 +90,16 @@ header,
   }
   .pageWrapper {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
   .bigImg {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
     align-items: center;
+    width: 100%;
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
@@ -103,8 +108,10 @@ header,
   }
   .imgHeaderBig {
     display: flex;
-    position: absolute;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    position: absolute;
     font-weight: bold;
     letter-spacing: 0.2rem;
     text-align: center;
@@ -153,12 +160,13 @@ header,
     object-fit: cover;
   }
   .price {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
     width: 50%;
     position: relative;
     top: -110%;
     text-shadow: 2px 2px 2px rgba(10, 10, 10, 0.8);
-    cursor: pointer;
-    color: rgb(255, 255, 255);
   }
   .price:hover {
     color: rgb(255, 0, 0);
@@ -172,11 +180,12 @@ header,
     padding-top: 1rem;
   }
   .threeImg article {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
     margin-bottom: 2rem;
     width: 75%;
     text-align: center;
-    color: rgb(255, 255, 255);
-    cursor: pointer;
   }
   .threeImg article:hover {
     color: rgb(255, 0, 0);
@@ -199,7 +208,9 @@ header,
   }
   footer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 100%;
   }
   .footerWrapper {
@@ -211,17 +222,18 @@ header,
   .contacts {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    padding: 2rem;
     justify-content: center;
+    align-items: start;
+    padding: 2rem;
     gap: 20px;
     font-size: 1.2rem;
   }
   .formArea {
-    width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
   }
   .formWrapper {
     display: grid;
@@ -240,6 +252,7 @@ header,
   .formInput {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
     margin: 0.5rem;
     width: 100%;
@@ -266,12 +279,13 @@ header,
 @media all and (max-width: 1000px) {
   .mobileMenuWrapper {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     position: sticky;
     top: 0;
     z-index: 1;
     width: 100%;
-    justify-content: space-between;
-    align-items: center;
     height: 70px;
     background-color: #2D2D2C;
   }
@@ -309,14 +323,17 @@ header,
   .mainWrapper {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     background-color: #161616;
     width: 100%;
   }
   .imgHeaderBig {
     display: flex;
-    position: absolute;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    position: absolute;
     font-weight: bold;
     letter-spacing: 0.2rem;
     text-align: center;
@@ -339,8 +356,8 @@ header,
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
     align-items: center;
+    width: 100%;
   }
   .bigImg padding {
     top: 2rem;
@@ -376,12 +393,13 @@ header,
     object-fit: cover;
   }
   .price {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
     width: 50%;
     position: relative;
     top: -100px;
     text-shadow: 2px 2px 2px rgba(10, 10, 10, 0.8);
-    cursor: pointer;
-    color: rgb(255, 255, 255);
   }
   .price:hover {
     color: rgb(255, 0, 0);
@@ -401,10 +419,11 @@ header,
     margin-bottom: 1rem;
   }
   .threeImg article {
-    width: 75%;
-    text-align: left;
+    text-decoration: none;
     color: rgb(255, 255, 255);
     cursor: pointer;
+    width: 75%;
+    text-align: left;
   }
   .threeImg article:hover {
     color: rgb(255, 0, 0);
@@ -436,17 +455,19 @@ header,
   .contacts {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: start;
     width: 70%;
     padding-left: 2rem;
-    justify-content: center;
     gap: 20px;
     font-size: 1.2rem;
   }
   .formArea {
-    width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
   }
   .formWrapper {
     display: grid;
@@ -465,6 +486,7 @@ header,
   .formInput {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
     margin: 0.5rem;
     width: 100%;

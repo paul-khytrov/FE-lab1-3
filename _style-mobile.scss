@@ -7,13 +7,11 @@ $mobile-nav-height: 70px;
     display: none;
 
     @media all and (max-width: style-global.$layout-breakpoint) {
-        display: flex;
+        @include style-global.flexBox($fd: row, $jc: space-between);
         position: sticky;
         top: 0;
         z-index: 1;
         width: 100%;
-        justify-content: space-between;
-        align-items: center;
         height: $mobile-nav-height;
         background-color: style-global.$color-menu;
     }
@@ -37,13 +35,7 @@ $mobile-nav-height: 70px;
     }
 
     a {
-        text-decoration: none;
-        color: style-global.$color-link;
-        cursor: pointer;
-
-        &:hover {
-            color: style-global.$color-link-hover;
-        }
+        @include style-global.link;
     }
 
     #logo {
@@ -57,17 +49,14 @@ $mobile-nav-height: 70px;
     }
 
     .mainWrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include style-global.flexBox;
         background-color: style-global.$color-main-content;
         width: 100%;
     }
 
     .imgHeaderBig {
-        display: flex;
+        @include style-global.flexBox;
         position: absolute;
-        justify-content: center;
         font-weight: bold;
         letter-spacing: 0.2rem;
         text-align: center;
@@ -89,11 +78,8 @@ $mobile-nav-height: 70px;
     }
 
     .bigImg {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        @include style-global.flexBox;
         width: 100%;
-        align-items: center;
 
         padding {
             top: 2rem;
@@ -145,16 +131,11 @@ $mobile-nav-height: 70px;
     }
 
     .price {
+        @include style-global.link;
         width: 50%;
         position: relative;
         top: -100px;
         text-shadow: 2px 2px 2px rgba(10, 10, 10, 0.8);
-        cursor: pointer;
-        color: style-global.$color-link;
-
-        &:hover {
-            color: style-global.$color-link-hover;
-        }
     }
 
     .priceHeader {
@@ -176,14 +157,9 @@ $mobile-nav-height: 70px;
         margin-bottom: 1rem;
 
         & article {
+            @include style-global.link;
             width: 75%;
             text-align: left;
-            color: style-global.$color-link;
-            cursor: pointer;
-
-            &:hover {
-                color: style-global.$color-link-hover;
-            }
         }
     }
 
@@ -217,20 +193,16 @@ $mobile-nav-height: 70px;
     }
 
     .contacts {
-        display: flex;
-        flex-direction: column;
+        @include style-global.flexBox($ai: start);
         width: 70%;
         padding-left: 2rem;
-        justify-content: center;
         gap: 20px;
         font-size: 1.2rem;
     }
 
     .formArea {
+        @include style-global.flexBox;
         width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
     .formWrapper {
@@ -250,9 +222,7 @@ $mobile-nav-height: 70px;
     }
 
     .formInput {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+        @include style-global.flexBox($fd: row);
         margin: 0.5rem;
         width: 100%;
     }
