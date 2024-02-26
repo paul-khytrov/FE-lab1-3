@@ -26,223 +26,223 @@ $mobile-nav-height: 70px;
         h4: 1.3rem
     );
 
-    @each $h, $h-size in $h-sizes {
-        //@debug $h, $h-size;
+@each $h, $h-size in $h-sizes {
+    //@debug $h, $h-size;
 
-        #{$h} {
-            font-size: $h-size;
-        }
+    #{$h} {
+        font-size: $h-size;
+    }
+}
+
+a {
+    @include style-global.link;
+}
+
+#logo {
+    margin-left: 3rem;
+    text-shadow: 2px 2px 5px rgb(255, 255, 255, 0.7);
+
+    h2:hover {
+        color: style-global.$color-link-hover;
+        text-shadow: 2px 2px 7px style-global.$color-link-hover;
+    }
+}
+
+.mainWrapper {
+    @include style-global.flexBox;
+    background-color: style-global.$color-main-content;
+    width: 100%;
+}
+
+.imgHeaderBig {
+    @include style-global.flexBox;
+    position: absolute;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    text-align: center;
+    text-shadow: 5px 5px 5px rgba(10, 10, 10, 0.5);
+    top: 20%;
+    width: 80%;
+    font-size: 1.3rem;
+}
+
+.butt1 {
+    width: 110px;
+    height: 40px;
+    border-radius: 5px;
+    margin: 0.5rem;
+    background-color: style-global.$color-menuButton;
+    color: style-global.$color-text;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.bigImg {
+    @include style-global.flexBox;
+    width: 100%;
+
+    padding {
+        top: 2rem;
+        bottom: 2rem;
     }
 
-    a {
+    & img {
+        width: 100%;
+    }
+}
+
+#starterBox {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    background-color: style-global.$color-menu;
+
+    padding {
+        bottom: 1rem;
+        top: 1rem;
+    }
+
+    margin-bottom: 1rem;
+}
+
+.fourImg {
+    display: grid;
+    width: 100%;
+    justify-items: center;
+    grid-template-rows: 1fr 10px 1fr 10px 1fr 10px 1fr 10px;
+    grid-template-areas:
+        "img1"
+        "pr1"
+        "img2"
+        "pr2"
+        "img3"
+        "pr3"
+        "img4"
+        "pr4";
+    padding-top: 1rem;
+
+    & img {
+        height: 450px;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.price {
+    @include style-global.link;
+    width: 50%;
+    position: relative;
+    top: -100px;
+    text-shadow: 2px 2px 2px rgba(10, 10, 10, 0.8);
+}
+
+.priceHeader {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.threeImg {
+    display: grid;
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+    grid-template-rows: 5fr 5fr 5fr;
+    grid-template-areas:
+        "badge1 message1"
+        "badge2 message2"
+        "badge3 message3";
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+
+    & article {
         @include style-global.link;
+        width: 75%;
+        text-align: left;
     }
+}
 
-    #logo {
-        margin-left: 3rem;
-        text-shadow: 2px 2px 5px rgb(255, 255, 255, 0.7);
+.badge1,
+.badge2 {
+    width: 60px;
+    height: 60px;
+    padding: 0.7rem;
+}
 
-        h2:hover {
-            color: style-global.$color-link-hover;
-            text-shadow: 2px 2px 7px style-global.$color-link-hover;
-        }
+.badge1 {
+    fill: style-global.$color-text;
+}
+
+.badge2 {
+    fill: none;
+    stroke-width: 50;
+    stroke: style-global.$color-text;
+}
+
+.linkHeader {
+    font-size: 1.4rem;
+}
+
+.footerWrapper {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    background-color: style-global.$color-menu;
+    width: 100%;
+    padding-bottom: 1rem;
+}
+
+.contacts {
+    @include style-global.flexBox($ai: start);
+    width: 70%;
+    padding-left: 2rem;
+    gap: 20px;
+    font-size: 1.2rem;
+}
+
+.formArea {
+    @include style-global.flexBox;
+    width: 100%;
+}
+
+.formWrapper {
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    align-items: center;
+    width: 70%;
+    height: 100px;
+    padding: 1em;
+    border: 1px solid style-global.$color-text;
+    border-radius: 1em;
+    background-color: style-global.$color-main-content;
+}
+
+.formHeader {
+    margin: 0.5rem;
+}
+
+.formInput {
+    @include style-global.flexBox($fd: row);
+    margin: 0.5rem;
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    border: solid 1px style-global.$color-text;
+    border-radius: 10px;
+    background-color: style-global.$color-menu;
+    color: style-global.$color-text;
+    padding: 0.5rem;
+    font-weight: bold;
+    font-size: 0.9rem;
+
+    &:focus {
+        border-color: #042de2;
     }
-
-    .mainWrapper {
-        @include style-global.flexBox;
-        background-color: style-global.$color-main-content;
-        width: 100%;
-    }
-
-    .imgHeaderBig {
-        @include style-global.flexBox;
-        position: absolute;
-        font-weight: bold;
-        letter-spacing: 0.2rem;
-        text-align: center;
-        text-shadow: 5px 5px 5px rgba(10, 10, 10, 0.5);
-        top: 20%;
-        width: 80%;
-        font-size: 1.3rem;
-    }
-
-    .butt1 {
-        width: 110px;
-        height: 40px;
-        border-radius: 5px;
-        margin: 0.5rem;
-        background-color: style-global.$color-menuButton;
-        color: style-global.$color-text;
-        font-size: 1rem;
-        cursor: pointer;
-    }
-
-    .bigImg {
-        @include style-global.flexBox;
-        width: 100%;
-
-        padding {
-            top: 2rem;
-            bottom: 2rem;
-        }
-
-        & img {
-            width: 100%;
-        }
-    }
-
-    #starterBox {
-        display: grid;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        justify-items: center;
-        align-items: center;
-        width: 100%;
-        background-color: style-global.$color-menu;
-
-        padding {
-            bottom: 1rem;
-            top: 1rem;
-        }
-
-        margin-bottom: 1rem;
-    }
-
-    .fourImg {
-        display: grid;
-        width: 100%;
-        justify-items: center;
-        grid-template-rows: 1fr 10px 1fr 10px 1fr 10px 1fr 10px;
-        grid-template-areas:
-            "img1"
-            "pr1"
-            "img2"
-            "pr2"
-            "img3"
-            "pr3"
-            "img4"
-            "pr4";
-        padding-top: 1rem;
-
-        & img {
-            height: 450px;
-            width: 100%;
-            object-fit: cover;
-        }
-    }
-
-    .price {
-        @include style-global.link;
-        width: 50%;
-        position: relative;
-        top: -100px;
-        text-shadow: 2px 2px 2px rgba(10, 10, 10, 0.8);
-    }
-
-    .priceHeader {
-        font-size: 1.6rem;
-        font-weight: bold;
-    }
-
-    .threeImg {
-        display: grid;
-        width: 100%;
-        justify-items: center;
-        align-items: center;
-        grid-template-rows: 5fr 5fr 5fr;
-        grid-template-areas:
-            "badge1 message1"
-            "badge2 message2"
-            "badge3 message3";
-        padding-top: 1rem;
-        margin-bottom: 1rem;
-
-        & article {
-            @include style-global.link;
-            width: 75%;
-            text-align: left;
-        }
-    }
-
-    .badge1,
-    .badge2 {
-        width: 60px;
-        height: 60px;
-        padding: 0.7rem;
-    }
-
-    .badge1 {
-        fill: style-global.$color-text;
-    }
-
-    .badge2 {
-        fill: none;
-        stroke-width: 50;
-        stroke: style-global.$color-text;
-    }
-
-    .linkHeader {
-        font-size: 1.4rem;
-    }
-
-    .footerWrapper {
-        display: grid;
-        grid-template-rows: 2fr 1fr;
-        background-color: style-global.$color-menu;
-        width: 100%;
-        padding-bottom: 1rem;
-    }
-
-    .contacts {
-        @include style-global.flexBox($ai: start);
-        width: 70%;
-        padding-left: 2rem;
-        gap: 20px;
-        font-size: 1.2rem;
-    }
-
-    .formArea {
-        @include style-global.flexBox;
-        width: 100%;
-    }
-
-    .formWrapper {
-        display: grid;
-        grid-template-rows: 1fr 2fr;
-        align-items: center;
-        width: 70%;
-        height: 100px;
-        padding: 1em;
-        border: 1px solid style-global.$color-text;
-        border-radius: 1em;
-        background-color: style-global.$color-main-content;
-    }
-
-    .formHeader {
-        margin: 0.5rem;
-    }
-
-    .formInput {
-        @include style-global.flexBox($fd: row);
-        margin: 0.5rem;
-        width: 100%;
-    }
-
-    input {
-        width: 100%;
-        height: 40px;
-        box-sizing: border-box;
-        border: solid 1px style-global.$color-text;
-        border-radius: 10px;
-        background-color: style-global.$color-menu;
-        color: style-global.$color-text;
-        padding: 0.5rem;
-        font-weight: bold;
-        font-size: 0.9rem;
-
-        &:focus {
-            border-color: #042de2;
-        }
-    }
+}
 }
 
 #hamburger {
@@ -296,4 +296,43 @@ $mobile-nav-height: 70px;
             transform: rotate(-135deg);
         }
     }
+}
+
+.modalMenu {
+    position: fixed;
+
+    & .container {
+        display: none;
+        position: fixed;
+        left: 0;
+        right: 0;
+        justify-content: center;
+        align-content: center;
+        max-height: 85vh;
+        background-color: style-global.$color-background;
+        box-shadow: 10px 5px 5px style-global.$color-text;
+        border-top: solid 1px style-global.$color-text;
+        z-index: 100;
+        top: $mobile-nav-height;
+        overflow: auto;
+    }
+
+    & .show {
+        display: flex;
+        animation: fadeIn 0.6s;
+        -webkit-animation: fadeIn 0.6s;
+    }
+}
+
+.menu-item {
+    @include style-global.link;
+
+    padding: {
+        top: 2rem;
+        bottom: 2rem;
+    }
+
+    font-size: 1rem;
+    animation: fadeIn 1s;
+    -webkit-animation: fadeIn 1s;
 }

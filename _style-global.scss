@@ -21,6 +21,7 @@ $max-width: 80vw;
 
 @mixin link {
     text-decoration: none;
+    list-style-type: none;
     color: $color-link;
     cursor: pointer;
 
