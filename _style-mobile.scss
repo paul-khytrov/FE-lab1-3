@@ -243,7 +243,6 @@ input {
         border-color: #042de2;
     }
 }
-}
 
 #hamburger {
     display: block;
@@ -319,8 +318,6 @@ input {
 
     & .show {
         display: flex;
-        animation: fadeIn 0.6s;
-        -webkit-animation: fadeIn 0.6s;
     }
 }
 
@@ -333,6 +330,6 @@ input {
     }
 
     font-size: 1rem;
-    animation: fadeIn 1s;
-    -webkit-animation: fadeIn 1s;
+
+}
 }
