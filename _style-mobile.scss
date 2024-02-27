@@ -8,9 +8,6 @@ $mobile-nav-height: 70px;
 
     @media all and (max-width: style-global.$layout-breakpoint) {
         @include style-global.flexBox($fd: row, $jc: space-between);
-        position: sticky;
-        top: 0;
-        z-index: 1;
         width: 100%;
         height: $mobile-nav-height;
         background-color: style-global.$color-menu;
@@ -18,6 +15,12 @@ $mobile-nav-height: 70px;
 }
 
 @media all and (max-width: style-global.$layout-breakpoint) {
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
     //headers font-sizes:
     $h-sizes: (
         h1: 2rem,
@@ -307,6 +310,7 @@ input {
         right: 0;
         justify-content: center;
         align-content: center;
+        text-align: center;
         max-height: 85vh;
         background-color: style-global.$color-background;
         box-shadow: 10px 5px 5px style-global.$color-text;
