@@ -29,8 +29,8 @@ $top-nav-height: 150px;
         text-shadow: 2px 2px 5px rgb(255, 255, 255, 0.7);
 
         h2:hover {
-            color: style-global.$color-link-hover;
-            text-shadow: 2px 2px 7px style-global.$color-link-hover;
+            color: var(--color-link-hover);
+            text-shadow: 2px 2px 7px var(--color-link-hover);
         }
     }
 
@@ -47,13 +47,13 @@ $top-nav-height: 150px;
         @include style-global.flexBox($fd: row, $jc: space-between);
         width: style-global.$max-width;
         height: $top-nav-height;
-        background-color: style-global.$color-menu;
+        background-color: var(--color-menu);
     }
 
     .mainWrapper {
         @include style-global.flexBox;
         width: style-global.$max-width;
-        background-color: style-global.$color-main-content;
+        background-color: var(--color-main-content);
         width: style-global.$max-width;
     }
 
@@ -89,8 +89,8 @@ $top-nav-height: 150px;
         height: 40px;
         border-radius: 5px;
         margin: 0.5rem;
-        background-color: style-global.$color-menuButton;
-        color: style-global.$color-text;
+        background-color: var(--color-menuButton);
+        color: var(--color-text);
         font-size: 1rem;
         cursor: pointer;
     }
@@ -103,7 +103,7 @@ $top-nav-height: 150px;
         align-items: center;
         text-align: center;
         width: 70%;
-        background-color: style-global.$color-menu;
+        background-color: var(--color-menu);
         padding-bottom: 1rem;
         padding-top: 1rem;
     }
@@ -163,13 +163,13 @@ $top-nav-height: 150px;
     }
 
     .badge1 {
-        fill: style-global.$color-text;
+        fill: var(--color-text);
     }
 
     .badge2 {
         fill: none;
         stroke-width: 50;
-        stroke: style-global.$color-text;
+        stroke: var(--color-text);
     }
 
     .linkHeader {
@@ -184,7 +184,7 @@ $top-nav-height: 150px;
     .footerWrapper {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        background-color: style-global.$color-menu;
+        background-color: var(--color-menu);
         width: style-global.$max-width;
     }
 
@@ -207,9 +207,9 @@ $top-nav-height: 150px;
         width: 70%;
         height: 100px;
         padding: 1em;
-        border: 1px solid style-global.$color-text;
+        border: 1px solid var(--color-text);
         border-radius: 1em;
-        background-color: style-global.$color-main-content;
+        background-color: var(--color-main-content);
     }
 
     .formHeader {
@@ -226,10 +226,10 @@ $top-nav-height: 150px;
         width: 100%;
         height: 40px;
         box-sizing: border-box;
-        border: solid 1px style-global.$color-text;
+        border: solid 1px var(--color-text);
         border-radius: 10px;
-        background-color: style-global.$color-menu;
-        color: style-global.$color-text;
+        background-color: var(--color-menu);
+        color: var(--color-text);
         padding: 0.5rem;
         font-weight: bold;
         font-size: 0.9rem;

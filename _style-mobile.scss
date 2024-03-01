@@ -10,7 +10,7 @@ $mobile-nav-height: 70px;
         @include style-global.flexBox($fd: row, $jc: space-between);
         width: 100%;
         height: $mobile-nav-height;
-        background-color: style-global.$color-menu;
+        background-color: var(--color-menu);
     }
 }
 
@@ -46,14 +46,14 @@ a {
     text-shadow: 2px 2px 5px rgb(255, 255, 255, 0.7);
 
     h2:hover {
-        color: style-global.$color-link-hover;
-        text-shadow: 2px 2px 7px style-global.$color-link-hover;
+        color: var(--color-link-hover);
+        text-shadow: 2px 2px 7px var(--color-link-hover);
     }
 }
 
 .mainWrapper {
     @include style-global.flexBox;
-    background-color: style-global.$color-main-content;
+    background-color: var(--color-main-content);
     width: 100%;
 }
 
@@ -74,8 +74,8 @@ a {
     height: 40px;
     border-radius: 5px;
     margin: 0.5rem;
-    background-color: style-global.$color-menuButton;
-    color: style-global.$color-text;
+    background-color: var(--color-menuButton);
+    color: var(--color-text);
     font-size: 1rem;
     cursor: pointer;
 }
@@ -100,7 +100,7 @@ a {
     justify-items: center;
     align-items: center;
     width: 100%;
-    background-color: style-global.$color-menu;
+    background-color: var(--color-menu);
 
     padding {
         bottom: 1rem;
@@ -174,13 +174,13 @@ a {
 }
 
 .badge1 {
-    fill: style-global.$color-text;
+    fill: var(--color-text);
 }
 
 .badge2 {
     fill: none;
     stroke-width: 50;
-    stroke: style-global.$color-text;
+    stroke: var(--color-text);
 }
 
 .linkHeader {
@@ -190,7 +190,7 @@ a {
 .footerWrapper {
     display: grid;
     grid-template-rows: 2fr 1fr;
-    background-color: style-global.$color-menu;
+    background-color: var(--color-menu);
     width: 100%;
     padding-bottom: 1rem;
 }
@@ -215,9 +215,9 @@ a {
     width: 70%;
     height: 100px;
     padding: 1em;
-    border: 1px solid style-global.$color-text;
+    border: 1px solid var(--color-text);
     border-radius: 1em;
-    background-color: style-global.$color-main-content;
+    background-color: var(--color-main-content);
 }
 
 .formHeader {
@@ -234,10 +234,10 @@ input {
     width: 100%;
     height: 40px;
     box-sizing: border-box;
-    border: solid 1px style-global.$color-text;
+    border: solid 1px var(--color-text);
     border-radius: 10px;
-    background-color: style-global.$color-menu;
-    color: style-global.$color-text;
+    background-color: var(--color-menu);
+    color: var(--color-text);
     padding: 0.5rem;
     font-weight: bold;
     font-size: 0.9rem;
@@ -261,7 +261,7 @@ input {
         display: block;
         height: 3px;
         width: 100%;
-        background: style-global.$color-text;
+        background: var(--color-text);
         border-radius: 9px;
         opacity: 1;
         left: 0;
@@ -312,9 +312,9 @@ input {
         align-content: center;
         text-align: center;
         max-height: 85vh;
-        background-color: style-global.$color-background;
-        box-shadow: 10px 5px 5px style-global.$color-text;
-        border-top: solid 1px style-global.$color-text;
+        background-color: var(--color-background);
+        box-shadow: 10px 5px 5px var(--color-text);
+        border-top: solid 1px var(--color-text);
         z-index: 100;
         top: $mobile-nav-height;
         overflow: auto;
