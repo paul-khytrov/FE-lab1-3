@@ -1,0 +1,22 @@
+//_style-p1-desktop.scss
+@use "style-global";
+
+.logo-svg {
+    width: 200px;
+    height: 200px;
+    fill: none;
+    stroke: var(--color-text);
+
+    .shield {
+        stroke-width: 10;
+    }
+
+    .chip {
+        stroke-width: 3;
+    }
+
+    .leo {
+        stroke-width: 0;
+        fill: var(--color-text);
+    }
+}

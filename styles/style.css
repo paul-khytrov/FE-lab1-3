@@ -615,5 +615,21 @@ p {
     color: var(--color-link-hover);
   }
 }
+.logo-svg {
+  width: 200px;
+  height: 200px;
+  fill: none;
+  stroke: var(--color-text);
+}
+.logo-svg .shield {
+  stroke-width: 10;
+}
+.logo-svg .chip {
+  stroke-width: 3;
+}
+.logo-svg .leo {
+  stroke-width: 0;
+  fill: var(--color-text);
+}
 
 /*# sourceMappingURL=style.css.map */
