@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="EN">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <title>Adventures</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=Wix+Madefor+Display:wght@400..800&display=swap"
+        rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet">
+    <link href="styles/animate.css" rel="stylesheet">
+</head>
+<header>
+    <!-- desktop menu -->
+    <div class="menuWrapper">
+        <a id="logo" href="index.html">
+            <h2 class="wow animate__flip">
+                Adventures
+            </h2>
+        </a>
+        <div id="navWrapper">
+            <button class="butt1">Explore</button>
+            <button class="butt1">Discower</button>
+            <button class="butt1">Join Now</button>
+            <button class="butt1">Login</button>
+        </div>
+    </div>
+    <!-- mobile bar -->
+    <div class="mobileMenuWrapper">
+        <a id="logo" href="index.html">
+            <h2 class="wow animate__flip">
+                Adventures
+            </h2>
+        </a>
+        <div id="hamburger" onclick="menuOpen()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <!-- mobile menu -->
+        <div class="modalMenu">
+            <div id="modalMenu" class="container animate__animated animate__fadeIn">
+                <ul>
+                    <li class="menu-item">
+                        <a href="">Explore</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="">Discower</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="">Join Now</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+<body>
+    <div class="pageWrapper">
+        <div class="mainWrapper">
+            <h2>
+                Thank you for subscribing! Now, to clarify some details...
+            </h2>
+            <div class="survey-area">
+                <form id="form-2">
+                    <div class="survey-wrapper">
+                        Email: <input type="email" id="mail" name="user_email" value="a123@gmail.com" />
+                        Password: <input type="password" id="password" name="user_password" value="0000000000" />
+                        Name: <input type="text" id="name" name="user_name" value="John" />
+                        Phone number: <input type="tel" id="tel" name="user_tel" value="+380123456789" />
+                        Current time: <input type="time" id="time" name="user_time" value="12:12" />
+                        Date of Birth: <input type="date" id="dateOfBirth" name="user_dateOfBirth" value="1989-12-02" />
+                        Gender:
+                        <fieldset>
+                            <label for=" male">Male:</label>
+                            <input type="radio" id="male" name="user_gender" value="male" />
+                            <label for="female">Female:</label>
+                            <input type="radio" id="female" name="user_gender" value="female" />
+                        </fieldset>
+                        Countries you’ve been to: <input list="countries-list" id="countries" name="user_countries" />
+                        <datalist id="countries-list">
+                            <option value="USA"></option>
+                            <option value="Bali"></option>
+                            <option value="UAE"></option>
+                            <option value="Ukraine"></option>
+                            <option value="Poland"></option>
+                        </datalist>
+                        Upload your ID in .pdf format: <input type="file" accept="application/pdf" id="file" />
+                        Which means of traveling have you used before:
+                        <fieldset>
+                            <label for="plane">Plane:</label>
+                            <input type="checkbox" id="plane" name="user_transport" value="plane" />
+                            <label for="train">Train:</label>
+                            <input type="checkbox" id="train" name="user_transport" value="train" />
+                            <label for="ship">Ship:</label>
+                            <input type="checkbox" id="ship" name="user_transport" value="ship" />
+                            <label for="car">Car:</label>
+                            <input type="checkbox" id="car" name="user_transport" value="car" />
+                        </fieldset>
+                        <button class="butt1" type="submit" value="submit">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footerWrapper wow animate__fadeIn">
+            <section class="contacts">
+                <h3>Explore Destination</h3>
+                <div><a href>Legal</a></div>
+                <div><a href>Career</a></div>
+                <div><a href>Contact Us</a></div>
+                <div><a href>Terms of Service</a></div>
+            </section>
+            <section class="formArea">
+                <div class="formWrapper">
+                    <div class="formHeader">Subscribe for travel
+                        inspiration</div>
+                    <form action="/my-handling-form-page" method="post">
+                        <div class="formInput">
+                            <input type="email" id="mail" name="user_email" value="Your e-mail address" />
+                            <button class="butt1" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </footer>
+    <script src="scripts/wow.js"></script>
+    <script src="scripts/script.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+</body>
+
+</html>

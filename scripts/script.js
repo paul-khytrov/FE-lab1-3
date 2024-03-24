@@ -4,3 +4,44 @@ function menuOpen() {
     hamburger.classList.toggle("open");
     modalMenu.classList.toggle("show");
 }
+
+
+var form = document.querySelector("#form-2");
+
+form.addEventListener(
+    "submit",
+    function (event) {
+        var formData = new FormData(form);
+        var id = formData.get("user_email");
+
+        var user_password = formData.get("user_password");
+        var user_name = formData.get("user_name");
+        var user_tel = formData.get("user_tel");
+        var user_time = formData.get("user_time");
+        var user_dateOfBirth = formData.get("user_dateOfBirth");
+        var user_gender = formData.get("user_gender");
+        var user_countries = formData.get("user_countries");
+        var user_transport = formData.getAll("user_transport");
+
+        var array = [
+            '{"user_password": "' + user_password + '", ' +
+            '"user_name": "' + user_name + '", ' +
+            '"user_tel": "' + user_tel + '", ' +
+            '"user_time": "' + user_time + '", ' +
+            '"user_dateOfBirth": "' + user_dateOfBirth + '", ' +
+            '"user_gender": "' + user_gender + '", ' +
+            '"user_countries": "' + user_countries + '", ' +
+            '"user_transport": [' + user_transport + ']} '
+        ];
+
+        localStorage.setItem(id, array);
+
+        event.preventDefault();
+    },
+    false
+);
+
+/*
+for (var i of formData.entries()) {
+  console.log(i[0] + "; " + i[1]);
+}*/
