@@ -72,12 +72,20 @@
             <div class="survey-area">
                 <form id="form-2">
                     <div class="survey-wrapper">
-                        Email: <input type="email" id="mail" name="user_email" value="a123@gmail.com" />
-                        Password: <input type="password" id="password" name="user_password" value="0000000000" />
-                        Name: <input type="text" id="name" name="user_name" value="John" />
-                        Phone number: <input type="tel" id="tel" name="user_tel" value="+380123456789" />
-                        Current time: <input type="time" id="time" name="user_time" value="12:12" />
-                        Date of Birth: <input type="date" id="dateOfBirth" name="user_dateOfBirth" value="1989-12-02" />
+                        <label for="mail">Email:</label>
+                        <input type="email" id="mail" name="user_email" value="a123@gmail.com" />
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="user_password" value="0000000000" />
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="user_name" value="John" />
+                        <label for="tel">Phone number:<br />
+                            <small>Format: 123-456-7890</small>
+                        </label>
+                        <input type="tel" id="tel" name="user_tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required value="123-456-7890" />
+                        <label for="time">Current time:</label>
+                        <input type="time" id="time" name="user_time" value="12:12" />
+                        <label for="dateOfBirth">Date of Birth:</label>
+                        <input type="date" id="dateOfBirth" name="user_dateOfBirth" value="1989-12-02" />
                         Gender:
                         <fieldset>
                             <label for=" male">Male:</label>
@@ -85,7 +93,8 @@
                             <label for="female">Female:</label>
                             <input type="radio" id="female" name="user_gender" value="female" />
                         </fieldset>
-                        Countries you’ve been to: <input list="countries-list" id="countries" name="user_countries" />
+                        <label for="countries">Countries you’ve been to:</label>
+                        <input list="countries-list" id="countries" name="user_countries" />
                         <datalist id="countries-list">
                             <option value="USA"></option>
                             <option value="Bali"></option>
@@ -93,17 +102,18 @@
                             <option value="Ukraine"></option>
                             <option value="Poland"></option>
                         </datalist>
-                        Upload your ID in .pdf format: <input type="file" accept="application/pdf" id="file" />
+                        <label for="file">Upload your ID in .pdf format:</label>
+                        <input type="file" accept="application/pdf" id="file" />
                         Which means of traveling have you used before:
                         <fieldset>
                             <label for="plane">Plane:</label>
-                            <input type="checkbox" id="plane" name="user_transport" value="plane" />
+                            <input type="checkbox" id="plane" name="user_transport1" value="plane" />
                             <label for="train">Train:</label>
-                            <input type="checkbox" id="train" name="user_transport" value="train" />
+                            <input type="checkbox" id="train" name="user_transport2" value="train" />
                             <label for="ship">Ship:</label>
-                            <input type="checkbox" id="ship" name="user_transport" value="ship" />
+                            <input type="checkbox" id="ship" name="user_transport3" value="ship" />
                             <label for="car">Car:</label>
-                            <input type="checkbox" id="car" name="user_transport" value="car" />
+                            <input type="checkbox" id="car" name="user_transport4" value="car" />
                         </fieldset>
                         <button class="butt1" type="submit" value="submit">Subscribe</button>
                     </div>
