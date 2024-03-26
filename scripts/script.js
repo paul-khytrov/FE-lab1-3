@@ -5,59 +5,27 @@ function menuOpen() {
     modalMenu.classList.toggle("show");
 }
 
-
-var form = document.querySelector("#form-2");
-
-form.addEventListener(
-    "submit",
-    function (event) {
-        var formData = new FormData(form);
-        var id = formData.get("user_email");
-        var dataSet = [];
-
-        for (var i of formData.entries()) {
-
-            dataSet.push('"' + i[0] + '":' + '"' + i[1] + '"');
+function writeData() {
+    var formData = new FormData(testForm);
+    var id = formData.get("user_email");
+    var str = JSON.stringify(
+        {
+            user_email: formData.get("user_email"),
+            user_password: formData.get("user_password"),
+            user_name: formData.get("user_name"),
+            user_tel: formData.get("user_tel"),
+            user_time: formData.get("user_time"),
+            user_dateOfBirth: formData.get("user_dateOfBirth"),
+            user_gender: formData.get("user_gender"),
+            user_countries: formData.get("user_countries"),
+            user_transport: formData.getAll("user_transport"),
         }
-        var dataString = dataSet.toString();
+    )
 
-        localStorage.setItem(id, "{" + dataString + "}");
-
-
-        console.log(JSON.parse(localStorage.getItem(id)));
-        console.log(allStorage())
-        //console.log(JSON.parse("{" + dataString + "}"));
-        /*     var id = formData.get("user_email");
-               var user_password = formData.get("user_password");
-               var user_name = formData.get("user_name");
-               var user_tel = formData.get("user_tel");
-               var user_time = formData.get("user_time");
-               var user_dateOfBirth = formData.get("user_dateOfBirth");
-               var user_gender = formData.get("user_gender");
-               var user_countries = formData.get("user_countries");
-               var user_transport = formData.getAll("user_transport");
-       
-               var dataSet = [
-                   '{user_password: "' + user_password + '", ' +
-                   'user_name: "' + user_name + '", ' +
-                   'user_tel: "' + user_tel + '", ' +
-                   'user_time: "' + user_time + '", ' +
-                   'user_dateOfBirth: "' + user_dateOfBirth + '", ' +
-                   'user_gender: "' + user_gender + '", ' +
-                   'user_countries: "' + user_countries + '", ' +
-                   'user_transport: [' + user_transport + ']} '
-               ];
-       
-               localStorage.setItem(id, dataSet);
-               console.log(id + ': ' + localStorage.getItem(id));*/
-
-        event.preventDefault();
-    },
-    false
-);
+    localStorage.setItem(id, str);
+}
 
 function allStorage() {
-
     var archive = [],
         keys = Object.keys(localStorage),
         i = 0, key;
@@ -65,14 +33,86 @@ function allStorage() {
     for (; key = keys[i]; i++) {
         archive.push(JSON.parse(localStorage.getItem(key)));
     }
-
     return archive;
 }
-function filterByGender(gender) {
+
+function generateTableHeaders() {
+    var tbl = document.querySelector("#filter-table");
+    const row = document.createElement("tr");
+    const tblHeaders = ["eMail", "Password", "Name", "tel", "Time", "Data", "Gender", "Country", "Transport"];
+    tblHeaders.forEach((element) => {
+        var cell = document.createElement("th");
+        var cellText = document.createTextNode(element);
+        cell.appendChild(cellText);
+        row.appendChild(cell);
+    })
+    tbl.appendChild(row);
+}
+
+var a = [];
+
+function generateTableRow(str) {
+
+    var filterResult = document.querySelector("#filter-table");
+    const row = document.createElement("tr");
+
+    let i = 0
+    for (var key in str) {
+        a[i] = document.createElement("td");
+        var cellText = document.createTextNode(str[key]);
+        a[i].appendChild(cellText);
+        row.appendChild(a[i]);
+        i = i + 1;
+    }
+
+    filterResult.appendChild(row);
+}
+
+function clearTbl() {
+    console.log("here")
+    const oldTable = document.querySelector("#filter-table");
+    var tblBody = oldTable.childNodes;
+    console.log();
+    for (var i = 0; i < tblBody.length; i++) {
+        //console.log(element);
+        tblBody[i].remove();
+        i--
+    }
+
+}
+
+function filterByGender() {
+    clearTbl();
+    var gender = prompt("input gender", ["male"]);
+    generateTableHeaders();
     var data = allStorage()
-    data.forEach(func => {
-        if (func.user_gender === gender) {
-            alert(JSON.stringify(func))
+    data.forEach(element => {
+        if (element.user_gender == gender) {
+            generateTableRow(element)
+        }
+    })
+}
+
+function filterByCountry() {
+    clearTbl();
+    var country = prompt("input Country", ["USA"]);
+    generateTableHeaders();
+    var data = allStorage()
+    data.forEach(element => {
+        if (element.user_countries == country) {
+            generateTableRow(element)
+        }
+    })
+}
+
+function filterByTransport() {
+    clearTbl();
+    var transport = prompt("input transport");
+    generateTableHeaders();
+    var data = allStorage()
+    data.forEach(element => {
+        if (element.user_transport.includes(transport)) {
+            generateTableRow(element)
         }
     })
 }

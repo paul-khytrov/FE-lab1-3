@@ -32,3 +32,32 @@ fieldset {
         height: 16px;
     }
 }
+
+.filter-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.filter-content {
+    display: flex;
+    font-size: 0.8rem;
+    overflow: auto;
+}
+
+td,
+th {
+    padding: 0.5rem;
+    min-width: 100px;
+    border: solid 1px;
+    text-align: center;
+    text-wrap: wrap;
+}

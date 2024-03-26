@@ -70,7 +70,7 @@
                 Thank you for subscribing! Now, to clarify some details...
             </h2>
             <div class="survey-area">
-                <form id="form-2">
+                <form id="testForm" onsubmit="writeData()">
                     <div class="survey-wrapper">
                         <label for="mail">Email:</label>
                         <input type="email" id="mail" name="user_email" value="a123@gmail.com" />
@@ -107,17 +107,29 @@
                         Which means of traveling have you used before:
                         <fieldset>
                             <label for="plane">Plane:</label>
-                            <input type="checkbox" id="plane" name="user_transport1" value="plane" />
+                            <input type="checkbox" id="plane" name="user_transport" value="plane" />
                             <label for="train">Train:</label>
-                            <input type="checkbox" id="train" name="user_transport2" value="train" />
+                            <input type="checkbox" id="train" name="user_transport" value="train" />
                             <label for="ship">Ship:</label>
-                            <input type="checkbox" id="ship" name="user_transport3" value="ship" />
+                            <input type="checkbox" id="ship" name="user_transport" value="ship" />
                             <label for="car">Car:</label>
-                            <input type="checkbox" id="car" name="user_transport4" value="car" />
+                            <input type="checkbox" id="car" name="user_transport" value="car" />
                         </fieldset>
-                        <button class="butt1" type="submit" value="submit">Subscribe</button>
+                        <button class="butt1" type="submit" value="submit">Submit</button>
                     </div>
                 </form>
+            </div>
+            <div class="filter-selector">
+                <button class="butt1" onclick="filterByGender()">Filter by Gender</button>
+                <button class="butt1" onclick="filterByCountry()">Filter By Country</button>
+                <button class="butt1" onclick="filterByTransport()">Filter By Transport</button>
+                <button class="butt1" onclick="clearTbl()">Clear Filter</button>
+            </div>
+            <div class="filter-wrapper">
+
+                <div class="filter-content">
+                    <table id="filter-table"></table>
+                </div>
             </div>
         </div>
     </div>
