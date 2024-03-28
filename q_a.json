@@ -1,0 +1,21 @@
+data =
+[
+    {
+        "question": "What is the last standing Wonder of the World?",
+        "a": [
+            "Colossus of Rhodes",
+            "Great Pyramid of Giza",
+            "Hanging Gardens of Babylon"
+        ],
+        "key": "a2"
+    },
+    {
+        "question": "What is the longest river in the world?",
+        "a": [
+            "Nile",
+            "Amazon",
+            "Dnister",
+        ],
+        "key": "a2"
+    }
+]

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="EN">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <title>Adventures</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=Wix+Madefor+Display:wght@400..800&display=swap"
+        rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet">
+    <link href="styles/animate.css" rel="stylesheet">
+</head>
+<header>
+    <!-- desktop menu -->
+    <div class="menuWrapper">
+        <a id="logo" href="index.html">
+            <h2 class="wow animate__flip">
+                Adventures
+            </h2>
+        </a>
+        <div id="navWrapper">
+            <button class="butt1">Explore</button>
+            <button class="butt1">Discower</button>
+            <button class="butt1">Join Now</button>
+            <button class="butt1">Login</button>
+        </div>
+    </div>
+    <!-- mobile bar -->
+    <div class="mobileMenuWrapper">
+        <a id="logo" href="index.html">
+            <h2 class="wow animate__flip">
+                Adventures
+            </h2>
+        </a>
+        <div id="hamburger" onclick="menuOpen()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <!-- mobile menu -->
+        <div class="modalMenu">
+            <div id="modalMenu" class="container animate__animated animate__fadeIn">
+                <ul>
+                    <li class="menu-item">
+                        <a href="">Explore</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="">Discower</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="">Join Now</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+<body>
+    <div class="pageWrapper">
+        <div class="mainWrapper">
+            </h2>Test</h2>
+            <div class="survey-area">
+                <form id="testForm" onsubmit="checkAnswers()">
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footerWrapper wow animate__fadeIn">
+            <section class="contacts">
+                <h3>Explore Destination</h3>
+                <div><a href>Legal</a></div>
+                <div><a href>Career</a></div>
+                <div><a href>Contact Us</a></div>
+                <div><a href>Terms of Service</a></div>
+            </section>
+            <section class="formArea">
+                <div class="formWrapper">
+                    <div class="formHeader">Subscribe for travel
+                        inspiration</div>
+                    <form action="/my-handling-form-page" method="post">
+                        <div class="formInput">
+                            <input type="email" id="mail" name="user_email" value="Your e-mail address" />
+                            <button class="butt1" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </footer>
+    <script src="scripts/wow.js"></script>
+    <script type="text/javascript" src="q_a.json"></script>
+    <script src="scripts/script.js"></script>
+
+
+    <script>
+        new WOW().init();
+        generateTestForm();
+    </script>
+</body>
+
+</html>

@@ -1,3 +1,4 @@
+
 function menuOpen() {
     var hamburger = document.getElementById("hamburger");
     var modalMenu = document.getElementById("modalMenu");
@@ -6,7 +7,7 @@ function menuOpen() {
 }
 
 function writeData() {
-    var formData = new FormData(testForm);
+    var formData = new FormData(surveyForm);
     var id = formData.get("user_email");
     var str = JSON.stringify(
         {
@@ -116,3 +117,51 @@ function filterByTransport() {
         }
     })
 }
+
+var ques_answ = data;
+
+function generateTestForm() {
+    const testForm = document.querySelector("#testForm");
+
+    for (var i = 0; i < 2; i++) {
+        var fieldset = document.createElement("fieldset");
+        var legend = document.createElement("legend");
+        var legendText = document.createTextNode(ques_answ[i].question);
+        legend.appendChild(legendText);
+        fieldset.appendChild(legend);
+
+        genRadioButtonSet(fieldset, i);
+        testForm.appendChild(fieldset);
+    }
+    var submit = document.createElement("button");
+    submit.setAttribute("class", "butt1");
+    submit.setAttribute("name", "submit");
+    testForm.appendChild(submit);
+    submit.innerHTML = ("Submit");
+}
+
+function genRadioButtonSet(fieldset, j) {
+    for (var i = 0; i < 3; i++) {
+        //var labelIndex = "a" + j + i;
+        var radioButtonIndex = "a" + j;
+        var ansverIndex = "a" + i;
+        var label = document.createElement("label");
+        //label.setAttribute("for", labelIndex);
+        var labelText = document.createTextNode(ques_answ[j].a[i]);
+        label.appendChild(labelText);
+
+        var radioButton = document.createElement("input");
+        radioButton.setAttribute("type", "radio");
+        radioButton.setAttribute("value", ansverIndex);
+        radioButton.setAttribute("name", radioButtonIndex);
+
+        fieldset.appendChild(label);
+        fieldset.appendChild(radioButton);
+    }
+}
+
+function checkAnswers() {
+    console.log(ques_answ[1]);
+}
+
+
