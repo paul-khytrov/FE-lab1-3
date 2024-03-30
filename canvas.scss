@@ -1,0 +1,9 @@
+//_style-canvas.scss
+@use "style-global";
+
+.canvas-area {
+    @include style-global.flexBox;
+    border: solid 1px;
+    margin: 1rem;
+    background-color: white;
+}
