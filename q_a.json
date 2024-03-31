@@ -5,7 +5,8 @@ const data =
         "a": [
             "Nile",
             "Amazon",
-            "Dnister"
+            "Dnister",
+            "Poltva",
         ],
         "key": "a1"
     },
@@ -15,15 +16,6 @@ const data =
             "40075km",
             "57104km",
             "24901km"
-        ],
-        "key": "a0"
-    },
-    {
-        "question": "What is the height of K2?",
-        "a": [
-            "8611m",
-            "11275m",
-            "4386m"
         ],
         "key": "a0"
     },
@@ -44,5 +36,13 @@ const data =
             "Hanging Gardens of Babylon"
         ],
         "key": "a1"
-    }
+    },
+    {
+        "question": "Who invented globe?",
+        "a": [
+            "Thomas Shelby",
+            "Albert Einstein",
+        ],
+        "key": "a0"
+    },
 ]

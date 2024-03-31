@@ -8,17 +8,16 @@ function createTag(tagName, attribute) {
 }
 
 function generateTestForm() {
-
-    for (var j = 0; j < 5; j++) {
+    ques_answ.forEach((items, index) => {
         var fieldset = createTag("fieldset", []);
         var legend = createTag("legend", []);
-        var legendText = document.createTextNode(ques_answ[j].question);
+        var legendText = document.createTextNode(items.question);
         legend.appendChild(legendText);
         fieldset.appendChild(legend);
 
-        genRadioButtonSet(fieldset, j);
+        genRadioButtonSet(fieldset, index);
         testForm.appendChild(fieldset);
-    };
+    });
 
     var submit = createTag("button", [
         { "name": "class", "value": "butt1" },
@@ -31,16 +30,16 @@ function generateTestForm() {
 }
 
 function genRadioButtonSet(fieldset, j) {
-    for (var i = 0; i < 3; i++) {
-        var labelIndex = "button-" + j + i;
+    ques_answ[j].a.forEach((items, index) => {
+        var labelIndex = "button-" + j + index;
         var radioButtonIndex = "q" + j;
-        var ansverIndex = "a" + i;
+        var ansverIndex = "a" + index;
 
         var label = createTag("label", [
             { "name": "for", "value": labelIndex }
         ]);
 
-        var labelText = document.createTextNode(ques_answ[j].a[i]);
+        var labelText = document.createTextNode(items);
         label.appendChild(labelText);
 
         var radioButton = createTag("input", [
@@ -52,7 +51,7 @@ function genRadioButtonSet(fieldset, j) {
 
         fieldset.appendChild(label);
         fieldset.appendChild(radioButton);
-    }
+    });
     var key = ques_answ[j].key;
     var keyIndex = "key" + j;
 
@@ -66,13 +65,14 @@ function genRadioButtonSet(fieldset, j) {
 
 function checkAnswers() {
     var result = 0;
+    var numberOfQuestion = ques_answ.length;
     var formData = new FormData(testForm);
 
-    for (i = 0; i < 5; i++) {
+    for (var i = 0; i < numberOfQuestion; i++) {
         var question = formData.get("q" + [i]);
         var ansver = formData.get("key" + [i]);
         if (question == ansver) result++;
     }
 
-    alert("Your result: " + result + " from " + i);
+    alert("Your result: " + result + " from " + numberOfQuestion);
 }
